@@ -22,13 +22,16 @@ public class DriveTrainCom extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.DriveTrainSubSystem.TankDrive(Robot.oi.Driver.getRawAxis(1), Robot.oi.Driver.getRawAxis(4));
-    	Robot,leftMotor.(1);
+    	//Robot.DriveTrainSubSystem.TankDrive(Robot.oi.Driver.getRawAxis(1), Robot.oi.Driver.getRawAxis(4));
+    	Robot.DriveTrainSubSystem.leftDrive.(1);
+        Robot.DriveTrainSubSystem.rightDrive(-1);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
         return false;
+        Robot.DriveTrainSubSystem.leftDrive.(0);
+        Robot.DriveTrainSubSystem.rightDrive(0);
     }
 
     // Called once after isFinished returns true
