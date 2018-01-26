@@ -30,12 +30,12 @@ public class DriveTrainCom extends Command {
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
         return false;
-        Robot.DriveTrainSubSystem.leftDrive.(0);
-        Robot.DriveTrainSubSystem.rightDrive(0);
     }
 
     // Called once after isFinished returns true
     protected void end() {
+        Robot.DriveTrainSubSystem.leftDrive.set(0);
+        Robot.DriveTrainSubSystem.rightDrive.set(0);
     }
 
     // Called when another command which requires one or more of the same
